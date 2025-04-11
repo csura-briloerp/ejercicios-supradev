@@ -32,13 +32,35 @@ while (true)
             case 7:
                 EjecutarEjericio(7, new Ejercicio07());
                 break;
+            case 8:
+                EjecutarEjericio(8, new Ejercicio08());
+                break;
+            case 9:
+                EjecutarEjericio(9, new Ejercicio09());
+                break;
+            case 10:
+                EjecutarEjericio(10, new Ejercicio10());
+                break;
+            case 11:
+                EjecutarEjericio(11, new Ejercicio11());
+                break;
+            case 12:
+                EjecutarEjericio(12, new Ejercicio12());
+                break;
+            case 13:
+                EjecutarEjericio(13, new Ejercicio13());
+                break;
+            case 14:
+                EjecutarEjericio(14, new Ejercicio14());
+                break;
             default:
-                Console.WriteLine($"Error: No existe el ejercicio {ejercicio}.");
+                Console.WriteLine($"\nError: No existe el ejercicio {ejercicio}.");
                 break;
         }
 
         Console.WriteLine("¿Desea continuar? (s/n)");
-        char continuar = Console.ReadLine().Trim().ToLower()[0];
+        string respuesta = Console.ReadLine().Trim().ToLower();
+        char continuar = string.IsNullOrEmpty(respuesta) ? 'n' : respuesta[0];
         if (continuar != 's')
         {
             break;

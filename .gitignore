@@ -1,0 +1,70 @@
+## Ignore build results
+bin/
+obj/
+out/
+
+## Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.VC.db
+
+## Ignore Visual Studio working folder
+.vs/
+
+## Ignore Rider files
+.idea/
+
+## Ignore VS Code files
+.vscode/
+
+## Ignore ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+## Ignore build artifacts
+*.dll
+*.exe
+*.app
+*.log
+*.vspscc
+*.vssscc
+
+## Ignore NuGet packages
+*.nupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+
+## Ignore dotnet CLI artifacts
+.project
+.lock.json
+artifacts/
+
+## Ignore published files
+publish/
+wwwroot/lib/
+
+## Ignore test results
+TestResults/
+*.TestResults/
+
+## Ignore secrets and local config
+appsettings.Development.json
+secrets.json
+
+## Ignore Entity Framework migrations history (optional)
+Migrations/
+
+## Ignore coverage tools
+coverage/
+*.coverage
+*.coveragexml
+
+## Ignore Resharper files
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+## Ignore macOS and Linux files
+.DS_Store
+*.swp

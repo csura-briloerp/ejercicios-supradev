@@ -17,26 +17,95 @@ namespace Semana04_CS.soluciones
             InitializeComponent();
         }
 
-        private bool operacionIniciada = false, operacionTerminada = false;
-        private double operando1 = 0, operando2 = 0, resultado = 0;
+        private double? operando1 = null;
+        private string operacion = null;
+        private bool esperandoNuevoNumero = false;
+        private int anchoMaximo = 16;
 
         private void agregarTexto(string texto)
         {
-            if (tboxPrincipal.Text.Length <= 15 && !operacionIniciada)
+            if (tboxPrincipal.Text.Length + texto.Length <= anchoMaximo)
             {
+                if (esperandoNuevoNumero)
+                {
+                    tboxPrincipal.Clear();
+                    esperandoNuevoNumero = false;
+                }
                 tboxPrincipal.Text += texto;
             }
-            else if (operacionIniciada)
+            else
             {
-                tboxPrincipal.Clear();
-                tboxPrincipal.Text += texto;
-                operacionIniciada = false;
+                tboxPrincipal.Text = "Muy extenso.";
+                operando1 = null;
+                operacion = null;
+                esperandoNuevoNumero = true;
             }
         }
 
-        private void btn0_Click(object sender, EventArgs e)
+        private double realizarOperacion(double a, double b, string op)
         {
-            agregarTexto("0");
+            switch (op)
+            {
+                case "+":
+                    return a + b;
+                case "-":
+                    return a - b;
+                case "*":
+                    return a * b;
+                case "/":
+                    if (b != 0)
+                        return a / b;
+                    else
+                        throw new DivideByZeroException();
+                default:
+                    return 0;
+            }
+        }
+
+        private void ejecutarOperacion(string op)
+        {
+            try
+            {
+                if (!esperandoNuevoNumero && !string.IsNullOrEmpty(tboxPrincipal.Text))
+                {
+                    if (operando1.HasValue && !string.IsNullOrEmpty(operacion))
+                    {
+                        double operando2 = double.Parse(tboxPrincipal.Text);
+                        double resultado = realizarOperacion(operando1.Value, operando2, operacion);
+                        if (resultado.ToString().Length > anchoMaximo)
+                        {
+                            throw new Exception();
+                        }
+                        operando1 = resultado;
+                        tboxPrincipal.Clear();
+                        agregarTexto(resultado.ToString());
+                    }
+                    else
+                    {
+                        operando1 = double.Parse(tboxPrincipal.Text);
+                    }
+
+                    if (op == "=")
+                    {
+                        operacion = null;
+                        esperandoNuevoNumero = false;
+                    }
+                    else
+                    {
+                        agregarTexto($" {op}");
+                        operacion = op;
+                        esperandoNuevoNumero = true;
+                    }
+                }
+            }
+            catch (DivideByZeroException)
+            {
+                tboxPrincipal.Text = "División entre cero.";
+            }
+            catch (Exception)
+            {
+                tboxPrincipal.Text = "Error en operación.";
+            }
         }
 
         private void btnDot_Click(object sender, EventArgs e)
@@ -45,6 +114,11 @@ namespace Semana04_CS.soluciones
             {
                 agregarTexto(".");
             }
+        }
+
+        private void btn0_Click(object sender, EventArgs e)
+        {
+            agregarTexto("0");
         }
 
         private void btn1_Click(object sender, EventArgs e)
@@ -90,41 +164,39 @@ namespace Semana04_CS.soluciones
         private void btn9_Click(object sender, EventArgs e)
         {
             agregarTexto("9");
+        }      
+
+        private void btnPlus_Click(object sender, EventArgs e)
+        {
+            ejecutarOperacion("+");
+        }
+
+        private void btnMinus_Click(object sender, EventArgs e)
+        {
+            ejecutarOperacion("-");
+        }
+
+        private void btnTimes_Click(object sender, EventArgs e)
+        {
+            ejecutarOperacion("*");
+        }
+
+        private void btnDivide_Click(object sender, EventArgs e)
+        {
+            ejecutarOperacion("/");
+        }
+
+        private void btnEqual_Click(object sender, EventArgs e)
+        {
+            ejecutarOperacion("=");
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             tboxPrincipal.Clear();
-        }
-
-        private void btnPlus_Click(object sender, EventArgs e)
-        {
-            if (operacionTerminada)
-            {
-                try
-                {
-                    operando2 = Convert.ToDouble(tboxPrincipal.Text);
-                    resultado = operando1 + operando2;
-                    tboxPrincipal.Text = resultado.ToString();
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Error en la operación");
-                }
-            }
-            else
-            {
-                try
-                {
-                    operando1 = Convert.ToDouble(tboxPrincipal.Text);
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Error en la operación");
-                }
-                agregarTexto(" +");
-                operacionIniciada = true;
-            }
+            operando1 = null;
+            operacion = null;
+            esperandoNuevoNumero = false;
         }
     }
 }

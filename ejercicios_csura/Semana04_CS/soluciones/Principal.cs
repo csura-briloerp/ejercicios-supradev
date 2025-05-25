@@ -23,10 +23,10 @@ namespace Semana04_CS.soluciones
             ejercicio01.ShowDialog();
         }
 
-        private void btnEjercicio02_Click(object sender, EventArgs e)
+        private void btnEjercicio03_Click(object sender, EventArgs e)
         {
-            Form ejercicio02 = new Ejercicio02();
-            ejercicio02.ShowDialog();
+            Form ejercicio03 = new Ejercicio03();
+            ejercicio03.ShowDialog();
         }
     }
 }

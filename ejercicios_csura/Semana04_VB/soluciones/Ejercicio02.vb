@@ -1,4 +1,4 @@
-﻿Public Class Ejercicio01
+﻿Public Class Ejercicio02
     Dim btnPrsionado As Boolean = False
     Private Sub btnHazClic_Click(sender As Object, e As EventArgs) Handles btnHazClic.Click
         If btnPrsionado Then

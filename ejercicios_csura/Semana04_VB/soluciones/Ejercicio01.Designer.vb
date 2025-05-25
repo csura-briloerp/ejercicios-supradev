@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Ejercicio01
+Partial Class Ejercicio02
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -48,14 +48,14 @@ Partial Class Ejercicio01
         Me.lblClic.TabIndex = 1
         Me.lblClic.Text = "..."
         '
-        'Ejercicio01
+        'Ejercicio02
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(244, 120)
         Me.Controls.Add(Me.lblClic)
         Me.Controls.Add(Me.btnHazClic)
-        Me.Name = "Ejercicio01"
+        Me.Name = "Ejercicio02"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ejercicio 1"
         Me.ResumeLayout(False)

@@ -96,9 +96,15 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="soluciones\Ejercicio01.Designer.vb">
-      <DependentUpon>Ejercicio01.vb</DependentUpon>
+      <DependentUpon>Ejercicio02.vb</DependentUpon>
     </Compile>
-    <Compile Include="soluciones\Ejercicio01.vb">
+    <Compile Include="soluciones\Ejercicio02.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="soluciones\Ejercicio05.Designer.vb">
+      <DependentUpon>Ejercicio05.vb</DependentUpon>
+    </Compile>
+    <Compile Include="soluciones\Ejercicio05.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -112,8 +118,11 @@
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="soluciones\Ejercicio01.resx">
-      <DependentUpon>Ejercicio01.vb</DependentUpon>
+    <EmbeddedResource Include="soluciones\Ejercicio02.resx">
+      <DependentUpon>Ejercicio02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="soluciones\Ejercicio05.resx">
+      <DependentUpon>Ejercicio05.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

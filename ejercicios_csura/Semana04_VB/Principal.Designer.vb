@@ -22,27 +22,41 @@ Partial Class Principal
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnEjercicio01 = New System.Windows.Forms.Button()
+        Me.btnEjercicio02 = New System.Windows.Forms.Button()
+        Me.btnEjercicio05 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'btnEjercicio01
+        'btnEjercicio02
         '
-        Me.btnEjercicio01.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.btnEjercicio02.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnEjercicio01.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEjercicio01.Location = New System.Drawing.Point(12, 12)
-        Me.btnEjercicio01.Name = "btnEjercicio01"
-        Me.btnEjercicio01.Size = New System.Drawing.Size(267, 39)
-        Me.btnEjercicio01.TabIndex = 0
-        Me.btnEjercicio01.Text = "Ejercicio 1"
-        Me.btnEjercicio01.UseVisualStyleBackColor = True
+        Me.btnEjercicio02.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEjercicio02.Location = New System.Drawing.Point(12, 12)
+        Me.btnEjercicio02.Name = "btnEjercicio02"
+        Me.btnEjercicio02.Size = New System.Drawing.Size(267, 39)
+        Me.btnEjercicio02.TabIndex = 0
+        Me.btnEjercicio02.Text = "Ejercicio 2"
+        Me.btnEjercicio02.UseVisualStyleBackColor = True
+        '
+        'btnEjercicio05
+        '
+        Me.btnEjercicio05.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnEjercicio05.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEjercicio05.Location = New System.Drawing.Point(12, 57)
+        Me.btnEjercicio05.Name = "btnEjercicio05"
+        Me.btnEjercicio05.Size = New System.Drawing.Size(267, 39)
+        Me.btnEjercicio05.TabIndex = 1
+        Me.btnEjercicio05.Text = "Ejercicio 5"
+        Me.btnEjercicio05.UseVisualStyleBackColor = True
         '
         'Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(291, 450)
-        Me.Controls.Add(Me.btnEjercicio01)
+        Me.Controls.Add(Me.btnEjercicio05)
+        Me.Controls.Add(Me.btnEjercicio02)
         Me.Name = "Principal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Semana 4"
@@ -50,5 +64,6 @@ Partial Class Principal
 
     End Sub
 
-    Friend WithEvents btnEjercicio01 As Button
+    Friend WithEvents btnEjercicio02 As Button
+    Friend WithEvents btnEjercicio05 As Button
 End Class

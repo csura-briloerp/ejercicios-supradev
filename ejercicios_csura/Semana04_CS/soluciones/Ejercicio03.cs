@@ -10,19 +10,21 @@ using System.Windows.Forms;
 
 namespace Semana04_CS.soluciones
 {
-    public partial class Ejercicio02 : Form
+    public partial class Ejercicio03 : Form
     {
-        public Ejercicio02()
+        private LogicaCalculadora logica;
+        public Ejercicio03()
         {
             InitializeComponent();
+            logica = new LogicaCalculadora(this);
         }
 
-        private double? operando1 = null;
-        private string operacion = null;
-        private bool esperandoNuevoNumero = false;
-        private int anchoMaximo = 16;
+        public double? operando1 = null;
+        public string operacion = null;
+        public bool esperandoNuevoNumero = false;
+        public int anchoMaximo = 16;
 
-        private void agregarTexto(string texto)
+        public void agregarTexto(string texto)
         {
             if (tboxPrincipal.Text.Length + texto.Length <= anchoMaximo)
             {
@@ -39,72 +41,6 @@ namespace Semana04_CS.soluciones
                 operando1 = null;
                 operacion = null;
                 esperandoNuevoNumero = true;
-            }
-        }
-
-        private double realizarOperacion(double a, double b, string op)
-        {
-            switch (op)
-            {
-                case "+":
-                    return a + b;
-                case "-":
-                    return a - b;
-                case "*":
-                    return a * b;
-                case "/":
-                    if (b != 0)
-                        return a / b;
-                    else
-                        throw new DivideByZeroException();
-                default:
-                    return 0;
-            }
-        }
-
-        private void ejecutarOperacion(string op)
-        {
-            try
-            {
-                if (!esperandoNuevoNumero && !string.IsNullOrEmpty(tboxPrincipal.Text))
-                {
-                    if (operando1.HasValue && !string.IsNullOrEmpty(operacion))
-                    {
-                        double operando2 = double.Parse(tboxPrincipal.Text);
-                        double resultado = realizarOperacion(operando1.Value, operando2, operacion);
-                        if (resultado.ToString().Length > anchoMaximo)
-                        {
-                            throw new Exception();
-                        }
-                        operando1 = resultado;
-                        tboxPrincipal.Clear();
-                        agregarTexto(resultado.ToString());
-                    }
-                    else
-                    {
-                        operando1 = double.Parse(tboxPrincipal.Text);
-                    }
-
-                    if (op == "=")
-                    {
-                        operacion = null;
-                        esperandoNuevoNumero = false;
-                    }
-                    else
-                    {
-                        agregarTexto($" {op}");
-                        operacion = op;
-                        esperandoNuevoNumero = true;
-                    }
-                }
-            }
-            catch (DivideByZeroException)
-            {
-                tboxPrincipal.Text = "División entre cero.";
-            }
-            catch (Exception)
-            {
-                tboxPrincipal.Text = "Error en operación.";
             }
         }
 
@@ -168,27 +104,27 @@ namespace Semana04_CS.soluciones
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            ejecutarOperacion("+");
+            logica.ejecutarOperacion("+");
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-            ejecutarOperacion("-");
+            logica.ejecutarOperacion("-");
         }
 
         private void btnTimes_Click(object sender, EventArgs e)
         {
-            ejecutarOperacion("*");
+            logica.ejecutarOperacion("*");
         }
 
         private void btnDivide_Click(object sender, EventArgs e)
         {
-            ejecutarOperacion("/");
+            logica.ejecutarOperacion("/");
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            ejecutarOperacion("=");
+            logica.ejecutarOperacion("=");
         }
 
         private void btnClear_Click(object sender, EventArgs e)

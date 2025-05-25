@@ -1,6 +1,6 @@
 ﻿namespace Semana04_CS.soluciones
 {
-    partial class Ejercicio02
+    partial class Ejercicio03
     {
         /// <summary>
         /// Required designer variable.
@@ -267,7 +267,7 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // Ejercicio02
+            // Ejercicio03
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -290,17 +290,15 @@
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);
             this.Controls.Add(this.tboxPrincipal);
-            this.Name = "Ejercicio02";
+            this.Name = "Ejercicio03";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ejercicio02";
+            this.Text = "Ejercicio03";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox tboxPrincipal;
         private System.Windows.Forms.Button btn1;
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.Button btn3;
@@ -318,5 +316,6 @@
         private System.Windows.Forms.Button btnTimes;
         private System.Windows.Forms.Button btnDivide;
         private System.Windows.Forms.Button btnClear;
+        public System.Windows.Forms.TextBox tboxPrincipal;
     }
 }

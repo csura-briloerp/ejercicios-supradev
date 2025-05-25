@@ -54,12 +54,19 @@
     <Compile Include="soluciones\Ejercicio01.Designer.cs">
       <DependentUpon>Ejercicio01.cs</DependentUpon>
     </Compile>
-    <Compile Include="soluciones\Ejercicio02.cs">
+    <Compile Include="soluciones\Ejercicio03.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="soluciones\Ejercicio02.Designer.cs">
-      <DependentUpon>Ejercicio02.cs</DependentUpon>
+    <Compile Include="soluciones\Ejercicio03.Designer.cs">
+      <DependentUpon>Ejercicio03.cs</DependentUpon>
     </Compile>
+    <Compile Include="soluciones\Ejercicio07.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="soluciones\Ejercicio07.Designer.cs">
+      <DependentUpon>Ejercicio07.cs</DependentUpon>
+    </Compile>
+    <Compile Include="soluciones\LogicaCalculadora.cs" />
     <Compile Include="soluciones\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,8 +85,8 @@
     <EmbeddedResource Include="soluciones\Ejercicio01.resx">
       <DependentUpon>Ejercicio01.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="soluciones\Ejercicio02.resx">
-      <DependentUpon>Ejercicio02.cs</DependentUpon>
+    <EmbeddedResource Include="soluciones\Ejercicio03.resx">
+      <DependentUpon>Ejercicio03.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="soluciones\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

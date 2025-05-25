@@ -1,0 +1,42 @@
+﻿@model Semana05.Models.Libro
+
+@{
+    
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Libro</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Titulo)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Autor)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Autor)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id } , new { @class = "btn btn-warning" }) |
+        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-dark" })
+    </p>
+</body>
+</html>

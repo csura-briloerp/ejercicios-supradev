@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Semana05.Models.Libro>
+
+@{
+    
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @*<p>
+        @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
+    </p>*@
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Autor)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Autor)
+                </td>
+                <td>
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.Id } , new { @class = "btn btn-info" })*@ |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-warning" }) |
+                    @*@Html.ActionLink("Delete", "Delete", new { id = item.Id } , new { @class = "btn btn-danger" })*@
+                </td>
+            </tr>
+        }
+        <tr>
+            <td>
+               Prueba
+            </td>
+            <td>
+               Error 404
+            </td>
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { id = 100 }, new { @class = "btn btn-info" })*@ |
+                @Html.ActionLink("Details", "Details", new { id = 100 }, new { @class = "btn btn-warning" }) |
+                @*@Html.ActionLink("Delete", "Delete", new { id = 100 }, new { @class = "btn btn-danger" })*@
+            </td>
+        </tr>
+
+    </table>
+</body>
+</html>

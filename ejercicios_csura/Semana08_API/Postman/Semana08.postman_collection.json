@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "415de687-e2a7-4268-acfd-28fbb62318da",
+		"name": "Semana08",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32065467"
+	},
+	"item": [
+		{
+			"name": "Productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/Productos",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"Productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Productos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Monitor\",\r\n    \"precio\": 300.00,\r\n    \"disponible\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/Productos",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"Productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Productos/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/Productos/3",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"Productos",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Productos/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/Productos/4",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"Productos",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Productos/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Otro Monitor\",\r\n    \"precio\": 999.00,\r\n    \"disponible\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/Productos/1",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"Productos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseURL",
+			"value": "http://localhost:5158/api/",
+			"type": "string"
+		}
+	]
+}

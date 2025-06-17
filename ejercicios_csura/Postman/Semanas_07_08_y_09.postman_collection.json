@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "415de687-e2a7-4268-acfd-28fbb62318da",
-		"name": "Semana08",
+		"name": "Semanas 07, 08 y 09",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "32065467"
 	},
@@ -138,7 +138,7 @@
 	"variable": [
 		{
 			"key": "BaseURL",
-			"value": "http://localhost:5158/api/",
+			"value": "http://localhost:5158/api",
 			"type": "string"
 		}
 	]

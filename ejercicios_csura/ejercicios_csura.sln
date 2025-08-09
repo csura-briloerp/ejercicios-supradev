@@ -29,6 +29,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semana09_API", "Semana09_AP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semana09", "Semana09\Semana09.csproj", "{B8A27443-DBF1-4873-8EC7-1AC9681604AE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Semana10", "Semana10", "{2084D55F-337E-4503-A28B-5495AFE204E9}"
+	ProjectSection(SolutionItems) = preProject
+		Semana10\ejercicio01.png = Semana10\ejercicio01.png
+		Semana10\ejercicio03.sql = Semana10\ejercicio03.sql
+		Semana10\ejercicio04.sql = Semana10\ejercicio04.sql
+		Semana10\ejercicio05.sql = Semana10\ejercicio05.sql
+		Semana10\ejercicio06.sql = Semana10\ejercicio06.sql
+		Semana10\ejercicio07.sql = Semana10\ejercicio07.sql
+		Semana10\ejercicio08.sql = Semana10\ejercicio08.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -40,6 +40,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Semana10", "Semana10", "{20
 		Semana10\ejercicio08.sql = Semana10\ejercicio08.sql
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Semana11", "Semana11", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		Semana11\ejercicio01.sql = Semana11\ejercicio01.sql
+		Semana11\ejercicio02.sql = Semana11\ejercicio02.sql
+		Semana11\ejercicio03.sql = Semana11\ejercicio03.sql
+		Semana11\ejercicio04.sql = Semana11\ejercicio04.sql
+		Semana11\ejercicio05.sql = Semana11\ejercicio05.sql
+		Semana11\ejercicio06.sql = Semana11\ejercicio06.sql
+		Semana11\ejercicio08.sql = Semana11\ejercicio08.sql
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semana11_CS", "Semana11_CS\Semana11_CS.csproj", "{7E494D88-0668-4FFE-B629-7E0BEF3A20B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,6 +103,10 @@ Global
 		{B8A27443-DBF1-4873-8EC7-1AC9681604AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8A27443-DBF1-4873-8EC7-1AC9681604AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8A27443-DBF1-4873-8EC7-1AC9681604AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E494D88-0668-4FFE-B629-7E0BEF3A20B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E494D88-0668-4FFE-B629-7E0BEF3A20B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E494D88-0668-4FFE-B629-7E0BEF3A20B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E494D88-0668-4FFE-B629-7E0BEF3A20B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

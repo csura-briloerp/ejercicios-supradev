@@ -51,3 +51,8 @@ Abra el archivo de solución `ejercicios_csura.sln` con **Visual Studio**. Desde
 - **Semana 12:**  
   Esta semana incluye ejercicios relacionados con SVN que no están en este repositorio.  
   Los ejercicios realizados con GIT están disponibles en la carpeta `Semana12`.
+
+## 📦 Colección Postman
+
+Para probar los proyectos API de las semanas **7**, **8** y **9**, se incluye una carpeta llamada `Postman` que contiene la colección necesaria para realizar las solicitudes HTTP correspondientes.  
+Importe la colección en Postman para facilitar la prueba de endpoints.
